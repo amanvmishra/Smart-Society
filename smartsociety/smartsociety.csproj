@@ -1,0 +1,629 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CA29D76E-DC5C-4D17-8B13-478077E99E60}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>smartsociety</RootNamespace>
+    <AssemblyName>smartsociety</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="RestSharp">
+      <HintPath>..\packages\RestSharp.105.2.3\lib\net4\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Twilio.Api">
+      <HintPath>..\packages\Twilio.4.7.0\lib\3.5\Twilio.Api.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\AcceptRequest.aspx" />
+    <Content Include="Admin\Apt-left-menu.inc">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Admin\AptDetailsEdit.aspx" />
+    <Content Include="Admin\AptDetailsView.aspx" />
+    <Content Include="Admin\CreateUser.aspx" />
+    <Content Include="Admin\CreateUsers.aspx" />
+    <Content Include="Admin\CreateUsersSuccess.aspx" />
+    <Content Include="Admin\EditFlatDetails.aspx" />
+    <Content Include="Admin\EditUser.aspx" />
+    <Content Include="Admin\FlatDetails.aspx" />
+    <Content Include="Admin\Images\alert-overlay.png" />
+    <Content Include="Admin\Images\Arrow-left.gif" />
+    <Content Include="Admin\Images\arrow.gif" />
+    <Content Include="Admin\Images\arrow_down.gif" />
+    <Content Include="Admin\Images\arrow_over.gif" />
+    <Content Include="Admin\Images\Background.jpg" />
+    <Content Include="Admin\Images\bg-body.gif" />
+    <Content Include="Admin\Images\bl.png" />
+    <Content Include="Admin\Images\bluearrow_down.gif" />
+    <Content Include="Admin\Images\bluearrow_over.gif" />
+    <Content Include="Admin\Images\br.png" />
+    <Content Include="Admin\Images\breadcrumb-arrow.gif" />
+    <Content Include="Admin\Images\buttonbig-hover.jpg" />
+    <Content Include="Admin\Images\buttonbig.jpg" />
+    <Content Include="Admin\Images\buttonbig1-hover.jpg" />
+    <Content Include="Admin\Images\buttonbig1.jpg" />
+    <Content Include="Admin\Images\buttongreenbig-hover.jpg" />
+    <Content Include="Admin\Images\buttongreenbig.jpg" />
+    <Content Include="Admin\Images\buttongreenbig1-hover.jpg" />
+    <Content Include="Admin\Images\buttongreenbig1.jpg" />
+    <Content Include="Admin\Images\buttongreenmedium-hover.jpg" />
+    <Content Include="Admin\Images\buttongreenmedium.jpg" />
+    <Content Include="Admin\Images\buttongreenmedium1-hover.jpg" />
+    <Content Include="Admin\Images\buttongreenmedium1.jpg" />
+    <Content Include="Admin\Images\buttongreensmall-hover.jpg" />
+    <Content Include="Admin\Images\buttongreensmall.jpg" />
+    <Content Include="Admin\Images\buttonmedium-hover.jpg" />
+    <Content Include="Admin\Images\buttonmedium.jpg" />
+    <Content Include="Admin\Images\buttonmedium1-hover.jpg" />
+    <Content Include="Admin\Images\buttonmedium1.jpg" />
+    <Content Include="Admin\Images\buttonsmall-hover.jpg" />
+    <Content Include="Admin\Images\buttonsmall.jpg" />
+    <Content Include="Admin\Images\calendar-icon.gif" />
+    <Content Include="Admin\Images\excel_icon.gif" />
+    <Content Include="Admin\Images\Footer-Background.gif" />
+    <Content Include="Admin\Images\Footer-Background1.gif" />
+    <Content Include="Admin\Images\gradient-hover.gif" />
+    <Content Include="Admin\Images\gradient.gif" />
+    <Content Include="Admin\Images\greenarrow_down.gif" />
+    <Content Include="Admin\Images\greenarrow_over.gif" />
+    <Content Include="Admin\Images\H-AMS_Logo.JPG" />
+    <Content Include="Admin\Images\H-AMS_Logo1.JPG" />
+    <Content Include="Admin\Images\H-AMS_Logo_S.JPG" />
+    <Content Include="Admin\Images\LeafBullet.gif" />
+    <Content Include="Admin\Images\logo16.gif" />
+    <Content Include="Admin\Images\logo7.jpg" />
+    <Content Include="Admin\Images\minus.gif" />
+    <Content Include="Admin\Images\navleft.png" />
+    <Content Include="Admin\Images\navleft1.png" />
+    <Content Include="Admin\Images\navright.png" />
+    <Content Include="Admin\Images\navright1.png" />
+    <Content Include="Admin\Images\Pagination-Back.gif" />
+    <Content Include="Admin\Images\Pagination-Back1.gif" />
+    <Content Include="Admin\Images\plus.gif" />
+    <Content Include="Admin\Images\plus1.gif" />
+    <Content Include="Admin\Images\Shadow.jpg" />
+    <Content Include="Admin\Images\Shadow1.jpg" />
+    <Content Include="Admin\Images\tab.png" />
+    <Content Include="Admin\Images\tl.png" />
+    <Content Include="Admin\Images\tr.png" />
+    <Content Include="Admin\Index.aspx" />
+    <Content Include="Admin\NewSignUp.aspx" />
+    <Content Include="Admin\ViewRequest.aspx" />
+    <Content Include="Images\logo16.gif" />
+    <Content Include="Images\logo7.jpg" />
+    <Content Include="SignUp.aspx" />
+    <Content Include="User\Apt-left-menu.inc" />
+    <Content Include="User\AptDetailsView.aspx" />
+    <Content Include="Admin\ListAllFlats.aspx" />
+    <Content Include="Admin\ListAllUsers.aspx" />
+    <Content Include="Admin\ListAllUsersDelete.aspx" />
+    <Content Include="Admin\main-menu.inc">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="User\FlatDetails.aspx" />
+    <Content Include="User\Images\alert-overlay.png" />
+    <Content Include="User\Images\Arrow-left.gif" />
+    <Content Include="User\Images\arrow.gif" />
+    <Content Include="User\Images\arrow_down.gif" />
+    <Content Include="User\Images\arrow_over.gif" />
+    <Content Include="User\Images\Background.jpg" />
+    <Content Include="User\Images\bg-body.gif" />
+    <Content Include="User\Images\bl.png" />
+    <Content Include="User\Images\bluearrow_down.gif" />
+    <Content Include="User\Images\bluearrow_over.gif" />
+    <Content Include="User\Images\br.png" />
+    <Content Include="User\Images\breadcrumb-arrow.gif" />
+    <Content Include="User\Images\buttonbig-hover.jpg" />
+    <Content Include="User\Images\buttonbig.jpg" />
+    <Content Include="User\Images\buttonbig1-hover.jpg" />
+    <Content Include="User\Images\buttonbig1.jpg" />
+    <Content Include="User\Images\buttongreenbig-hover.jpg" />
+    <Content Include="User\Images\buttongreenbig.jpg" />
+    <Content Include="User\Images\buttongreenbig1-hover.jpg" />
+    <Content Include="User\Images\buttongreenbig1.jpg" />
+    <Content Include="User\Images\buttongreenmedium-hover.jpg" />
+    <Content Include="User\Images\buttongreenmedium.jpg" />
+    <Content Include="User\Images\buttongreenmedium1-hover.jpg" />
+    <Content Include="User\Images\buttongreenmedium1.jpg" />
+    <Content Include="User\Images\buttongreensmall-hover.jpg" />
+    <Content Include="User\Images\buttongreensmall.jpg" />
+    <Content Include="User\Images\buttonmedium-hover.jpg" />
+    <Content Include="User\Images\buttonmedium.jpg" />
+    <Content Include="User\Images\buttonmedium1-hover.jpg" />
+    <Content Include="User\Images\buttonmedium1.jpg" />
+    <Content Include="User\Images\buttonsmall-hover.jpg" />
+    <Content Include="User\Images\buttonsmall.jpg" />
+    <Content Include="User\Images\calendar-icon.gif" />
+    <Content Include="User\Images\excel_icon.gif" />
+    <Content Include="User\Images\Footer-Background.gif" />
+    <Content Include="User\Images\Footer-Background1.gif" />
+    <Content Include="User\Images\gradient-hover.gif" />
+    <Content Include="User\Images\gradient.gif" />
+    <Content Include="User\Images\greenarrow_down.gif" />
+    <Content Include="User\Images\greenarrow_over.gif" />
+    <Content Include="User\Images\H-AMS_Logo.JPG" />
+    <Content Include="User\Images\H-AMS_Logo1.JPG" />
+    <Content Include="User\Images\H-AMS_Logo_S.JPG" />
+    <Content Include="User\Images\LeafBullet.gif" />
+    <Content Include="User\Images\logo16.gif" />
+    <Content Include="User\Images\logo7.jpg" />
+    <Content Include="User\Images\minus.gif" />
+    <Content Include="User\Images\navleft.png" />
+    <Content Include="User\Images\navleft1.png" />
+    <Content Include="User\Images\navright.png" />
+    <Content Include="User\Images\navright1.png" />
+    <Content Include="User\Images\Pagination-Back.gif" />
+    <Content Include="User\Images\Pagination-Back1.gif" />
+    <Content Include="User\Images\plus.gif" />
+    <Content Include="User\Images\plus1.gif" />
+    <Content Include="User\Images\Shadow.jpg" />
+    <Content Include="User\Images\Shadow1.jpg" />
+    <Content Include="User\Images\tab.png" />
+    <Content Include="User\Images\tl.png" />
+    <Content Include="User\Images\tr.png" />
+    <Content Include="User\Index.aspx" />
+    <Content Include="User\ListAllFlat.aspx" />
+    <Content Include="User\main-menu.inc">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Admin\PersonalDetails.aspx" />
+    <Content Include="Admin\Scripts\accordian.js" />
+    <Content Include="Admin\Scripts\ClientInclude.js" />
+    <Content Include="Admin\Scripts\dropdown.js" />
+    <Content Include="Admin\Scripts\General.js" />
+    <Content Include="Admin\Scripts\main-menu.inc" />
+    <Content Include="Admin\Scripts\popCalendar.js" />
+    <Content Include="Admin\SocietyNewsDetails.aspx" />
+    <Content Include="Admin\SocietyNewsUpdate.aspx" />
+    <Content Include="Admin\Styles\FormElements.css" />
+    <Content Include="Admin\Styles\General.css" />
+    <Content Include="Admin\Styles\Navigation.css" />
+    <Content Include="Admin\Styles\Themes.css" />
+    <Content Include="Admin\Styles\Themes1.css" />
+    <Content Include="Admin\UpdateNews.aspx" />
+    <Content Include="Admin\UserDetails.aspx" />
+    <Content Include="Admin\ViewNews.aspx" />
+    <Content Include="Admin\ViewNewsDetails.aspx" />
+    <Content Include="Admin\ViewSocietyNews.aspx" />
+    <Content Include="Images\alert-overlay.png" />
+    <Content Include="Images\Arrow-left.gif" />
+    <Content Include="Images\arrow.gif" />
+    <Content Include="Images\arrow_down.gif" />
+    <Content Include="Images\arrow_over.gif" />
+    <Content Include="Images\Background.jpg" />
+    <Content Include="Images\bg-body.gif" />
+    <Content Include="Images\bl.png" />
+    <Content Include="Images\bluearrow_down.gif" />
+    <Content Include="Images\bluearrow_over.gif" />
+    <Content Include="Images\br.png" />
+    <Content Include="Images\breadcrumb-arrow.gif" />
+    <Content Include="Images\buttonbig-hover.jpg" />
+    <Content Include="Images\buttonbig.jpg" />
+    <Content Include="Images\buttonbig1-hover.jpg" />
+    <Content Include="Images\buttonbig1.jpg" />
+    <Content Include="Images\buttongreenbig-hover.jpg" />
+    <Content Include="Images\buttongreenbig.jpg" />
+    <Content Include="Images\buttongreenbig1-hover.jpg" />
+    <Content Include="Images\buttongreenbig1.jpg" />
+    <Content Include="Images\buttongreenmedium-hover.jpg" />
+    <Content Include="Images\buttongreenmedium.jpg" />
+    <Content Include="Images\buttongreenmedium1-hover.jpg" />
+    <Content Include="Images\buttongreenmedium1.jpg" />
+    <Content Include="Images\buttongreensmall-hover.jpg" />
+    <Content Include="Images\buttongreensmall.jpg" />
+    <Content Include="Images\buttonmedium-hover.jpg" />
+    <Content Include="Images\buttonmedium.jpg" />
+    <Content Include="Images\buttonmedium1-hover.jpg" />
+    <Content Include="Images\buttonmedium1.jpg" />
+    <Content Include="Images\buttonsmall-hover.jpg" />
+    <Content Include="Images\buttonsmall.jpg" />
+    <Content Include="Images\calendar-icon.gif" />
+    <Content Include="Images\excel_icon.gif" />
+    <Content Include="Images\Footer-Background.gif" />
+    <Content Include="Images\Footer-Background1.gif" />
+    <Content Include="Images\gradient-hover.gif" />
+    <Content Include="Images\gradient.gif" />
+    <Content Include="Images\greenarrow_down.gif" />
+    <Content Include="Images\greenarrow_over.gif" />
+    <Content Include="Images\H-AMS_Logo.JPG" />
+    <Content Include="Images\H-AMS_Logo1.JPG" />
+    <Content Include="Images\H-AMS_Logo_S.JPG" />
+    <Content Include="Images\LeafBullet.gif" />
+    <Content Include="Images\minus.gif" />
+    <Content Include="Images\navleft.png" />
+    <Content Include="Images\navleft1.png" />
+    <Content Include="Images\navright.png" />
+    <Content Include="Images\navright1.png" />
+    <Content Include="Images\Pagination-Back.gif" />
+    <Content Include="Images\Pagination-Back1.gif" />
+    <Content Include="Images\plus.gif" />
+    <Content Include="Images\plus1.gif" />
+    <Content Include="Images\Shadow.jpg" />
+    <Content Include="Images\Shadow1.jpg" />
+    <Content Include="Images\tab.png" />
+    <Content Include="Images\tl.png" />
+    <Content Include="Images\tr.png" />
+    <Content Include="Login.aspx" />
+    <Content Include="Scripts\accordian.js" />
+    <Content Include="Scripts\ClientInclude.js" />
+    <Content Include="Scripts\dropdown.js" />
+    <Content Include="Scripts\General.js" />
+    <Content Include="Scripts\main-menu.inc" />
+    <Content Include="Scripts\popCalendar.js" />
+    <Content Include="Styles\FormElements.css" />
+    <Content Include="Styles\General.css" />
+    <Content Include="Styles\Navigation.css" />
+    <Content Include="Styles\Themes.css" />
+    <Content Include="Styles\Themes1.css" />
+    <Content Include="User\PersonalDetails.aspx" />
+    <Content Include="User\Scripts\accordian.js" />
+    <Content Include="User\Scripts\ClientInclude.js" />
+    <Content Include="User\Scripts\dropdown.js" />
+    <Content Include="User\Scripts\General.js" />
+    <Content Include="User\Scripts\main-menu.inc" />
+    <Content Include="User\Scripts\popCalendar.js" />
+    <Content Include="User\SelectedFlatDetails.aspx" />
+    <Content Include="User\SocietyNewsDetails.aspx" />
+    <Content Include="User\Styles\FormElements.css" />
+    <Content Include="User\Styles\General.css" />
+    <Content Include="User\Styles\Navigation.css" />
+    <Content Include="User\Styles\Themes.css" />
+    <Content Include="User\Styles\Themes1.css" />
+    <Content Include="User\UpdateRequest.aspx" />
+    <Content Include="User\ViewNews.aspx" />
+    <Content Include="User\ViewNewsDetails.aspx" />
+    <Content Include="User\ViewSocietyNews.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\AcceptRequest.aspx.cs">
+      <DependentUpon>AcceptRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AcceptRequest.aspx.designer.cs">
+      <DependentUpon>AcceptRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AptDetailsEdit.aspx.cs">
+      <DependentUpon>AptDetailsEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AptDetailsEdit.aspx.designer.cs">
+      <DependentUpon>AptDetailsEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AptDetailsView.aspx.cs">
+      <DependentUpon>AptDetailsView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AptDetailsView.aspx.designer.cs">
+      <DependentUpon>AptDetailsView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CreateUser.aspx.cs">
+      <DependentUpon>CreateUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CreateUser.aspx.designer.cs">
+      <DependentUpon>CreateUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CreateUsers.aspx.cs">
+      <DependentUpon>CreateUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CreateUsers.aspx.designer.cs">
+      <DependentUpon>CreateUsers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CreateUsersSuccess.aspx.cs">
+      <DependentUpon>CreateUsersSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CreateUsersSuccess.aspx.designer.cs">
+      <DependentUpon>CreateUsersSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\EditFlatDetails.aspx.cs">
+      <DependentUpon>EditFlatDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\EditFlatDetails.aspx.designer.cs">
+      <DependentUpon>EditFlatDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\EditUser.aspx.cs">
+      <DependentUpon>EditUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\EditUser.aspx.designer.cs">
+      <DependentUpon>EditUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FlatDetails.aspx.cs">
+      <DependentUpon>FlatDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\FlatDetails.aspx.designer.cs">
+      <DependentUpon>FlatDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\NewSignUp.aspx.cs">
+      <DependentUpon>NewSignUp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\NewSignUp.aspx.designer.cs">
+      <DependentUpon>NewSignUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ViewRequest.aspx.cs">
+      <DependentUpon>ViewRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ViewRequest.aspx.designer.cs">
+      <DependentUpon>ViewRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SignUp.aspx.cs">
+      <DependentUpon>SignUp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SignUp.aspx.designer.cs">
+      <DependentUpon>SignUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\AptDetailsView.aspx.cs">
+      <DependentUpon>AptDetailsView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\AptDetailsView.aspx.designer.cs">
+      <DependentUpon>AptDetailsView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ListAllFlats.aspx.cs">
+      <DependentUpon>ListAllFlats.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ListAllFlats.aspx.designer.cs">
+      <DependentUpon>ListAllFlats.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ListAllUsers.aspx.cs">
+      <DependentUpon>ListAllUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ListAllUsers.aspx.designer.cs">
+      <DependentUpon>ListAllUsers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ListAllUsersDelete.aspx.cs">
+      <DependentUpon>ListAllUsersDelete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ListAllUsersDelete.aspx.designer.cs">
+      <DependentUpon>ListAllUsersDelete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\PersonalDetails.aspx.cs">
+      <DependentUpon>PersonalDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\PersonalDetails.aspx.designer.cs">
+      <DependentUpon>PersonalDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SocietyNewsDetails.aspx.cs">
+      <DependentUpon>SocietyNewsDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SocietyNewsDetails.aspx.designer.cs">
+      <DependentUpon>SocietyNewsDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SocietyNewsUpdate.aspx.cs">
+      <DependentUpon>SocietyNewsUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SocietyNewsUpdate.aspx.designer.cs">
+      <DependentUpon>SocietyNewsUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UpdateNews.aspx.cs">
+      <DependentUpon>UpdateNews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\UpdateNews.aspx.designer.cs">
+      <DependentUpon>UpdateNews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UserDetails.aspx.cs">
+      <DependentUpon>UserDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\UserDetails.aspx.designer.cs">
+      <DependentUpon>UserDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ViewNews.aspx.cs">
+      <DependentUpon>ViewNews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ViewNews.aspx.designer.cs">
+      <DependentUpon>ViewNews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ViewNewsDetails.aspx.cs">
+      <DependentUpon>ViewNewsDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ViewNewsDetails.aspx.designer.cs">
+      <DependentUpon>ViewNewsDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ViewSocietyNews.aspx.cs">
+      <DependentUpon>ViewSocietyNews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ViewSocietyNews.aspx.designer.cs">
+      <DependentUpon>ViewSocietyNews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User\FlatDetails.aspx.cs">
+      <DependentUpon>FlatDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\FlatDetails.aspx.designer.cs">
+      <DependentUpon>FlatDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\ListAllFlat.aspx.cs">
+      <DependentUpon>ListAllFlat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\ListAllFlat.aspx.designer.cs">
+      <DependentUpon>ListAllFlat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\PersonalDetails.aspx.cs">
+      <DependentUpon>PersonalDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\PersonalDetails.aspx.designer.cs">
+      <DependentUpon>PersonalDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\SelectedFlatDetails.aspx.cs">
+      <DependentUpon>SelectedFlatDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\SelectedFlatDetails.aspx.designer.cs">
+      <DependentUpon>SelectedFlatDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\SocietyNewsDetails.aspx.cs">
+      <DependentUpon>SocietyNewsDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\SocietyNewsDetails.aspx.designer.cs">
+      <DependentUpon>SocietyNewsDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\UpdateRequest.aspx.cs">
+      <DependentUpon>UpdateRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\UpdateRequest.aspx.designer.cs">
+      <DependentUpon>UpdateRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\ViewNews.aspx.cs">
+      <DependentUpon>ViewNews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\ViewNews.aspx.designer.cs">
+      <DependentUpon>ViewNews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\ViewNewsDetails.aspx.cs">
+      <DependentUpon>ViewNewsDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\ViewNewsDetails.aspx.designer.cs">
+      <DependentUpon>ViewNewsDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\ViewSocietyNews.aspx.cs">
+      <DependentUpon>ViewSocietyNews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\ViewSocietyNews.aspx.designer.cs">
+      <DependentUpon>ViewSocietyNews.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\Images\Thumbs.db" />
+    <Content Include="Images\Thumbs.db" />
+    <Content Include="User\Images\Thumbs.db" />
+    <Content Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="_notes\UploadLeads.html.mno" />
+    <Content Include="_notes\UploadLeadsSuccess.html.mno" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50090</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49710/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

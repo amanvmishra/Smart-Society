@@ -1,0 +1,11 @@
+c:\users\mak\documents\visual studio 2013\Projects\smartsociety\smartsociety\bin\smartsociety.dll.config
+c:\users\mak\documents\visual studio 2013\Projects\smartsociety\smartsociety\bin\smartsociety.dll
+c:\users\mak\documents\visual studio 2013\Projects\smartsociety\smartsociety\bin\smartsociety.pdb
+c:\users\mak\documents\visual studio 2013\Projects\smartsociety\smartsociety\obj\Debug\smartsociety.dll
+c:\users\mak\documents\visual studio 2013\Projects\smartsociety\smartsociety\obj\Debug\smartsociety.pdb
+C:\Users\Mak\Documents\Visual Studio 2013\Projects\smartsociety\smartsociety\obj\Debug\smartsociety.csprojResolveAssemblyReference.cache
+C:\Users\Mak\Documents\Visual Studio 2013\Projects\smartsociety\smartsociety\bin\RestSharp.dll
+C:\Users\Mak\Documents\Visual Studio 2013\Projects\smartsociety\smartsociety\bin\Twilio.Api.dll
+C:\Users\Mak\Documents\Visual Studio 2013\Projects\smartsociety\smartsociety\bin\RestSharp.xml
+C:\Users\Mak\Documents\Visual Studio 2013\Projects\smartsociety\smartsociety\bin\Twilio.Api.pdb
+C:\Users\Mak\Documents\Visual Studio 2013\Projects\smartsociety\smartsociety\bin\Twilio.Api.xml
